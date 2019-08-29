@@ -1,0 +1,6 @@
+target/
+google.protobuf.rs
+google.rpc.rs
+p4.config.v1.rs
+p4.v1.rs
+Cargo.lock
