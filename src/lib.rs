@@ -1,17 +1,18 @@
 pub mod proto {
     pub mod v1 {
-        include!(concat!(env!("OUT_DIR"), "/p4.v1.rs"));
+        tonic::include_proto!("p4.v1");
     }
 
     pub mod config {
         pub mod v1 {
-            include!(concat!(env!("OUT_DIR"), "/p4.config.v1.rs"));
+            tonic::include_proto!("p4.config.v1");
         }
     }
 }
 
 pub mod google {
     pub mod rpc {
-        include!(concat!(env!("OUT_DIR"), "/google.rpc.rs"));
+        use crate::proto::v1::*;
+        tonic::include_proto!("google.rpc");
     }
 }

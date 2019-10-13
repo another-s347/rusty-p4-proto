@@ -1,6 +1,6 @@
 [package]
 name = "rusty-p4-proto"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 authors = ["skye347 <s347419313@gmail.com>"]
 edition = "2018"
 repository = "https://github.com/another-s347/rusty-p4-proto"
@@ -10,9 +10,9 @@ description = "Proto crate for Rusty-p4. Using p4runtime from PI repo."
 [dependencies]
 prost = "0.5"
 bytes = "0.4"
-grpcio = {version="0.5.0-alpha.4",features=["prost-codec"]}
+tonic-build = "0.1.0-alpha.3"
+tonic = {version="0.1.0-alpha.1",features=["rustls"]}
 prost-types = "0.5"
-futures = "0.1.28"
 
 [build-dependencies]
-grpcio-compiler = {version="0.5.0-alpha.2", features=["prost-codec"]}
+tonic-build = {version="0.1.0-alpha.3",features=["rustfmt"]}
