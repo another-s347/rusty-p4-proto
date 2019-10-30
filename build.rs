@@ -1,5 +1,3 @@
-use std::env;
-
 fn main() {
     tonic_build::configure()
         .build_server(false)
@@ -12,5 +10,13 @@ fn main() {
             "./googleapis/google/rpc/status.proto",
             "./googleapis/google/rpc/code.proto"],
         &["./p4runtime/proto/","./googleapis/"]
-    ).unwrap();
+        ).unwrap();
+    tonic_build::configure()
+        .build_server(false)
+        .compile(
+            &[
+                "./gnmi/gnmi.proto",
+                "./gnmi/gnmi_ext.proto"],
+            &["./gnmi","./googleapis/"]
+        ).unwrap();
 }
