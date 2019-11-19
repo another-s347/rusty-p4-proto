@@ -8,11 +8,11 @@ license = "Apache-2.0"
 description = "Proto crate for Rusty-p4. Using p4runtime from PI repo."
 
 [dependencies]
-prost = "0.5"
+prost = "0.5"   
 bytes = "0.4"
-tonic-build = "0.1.0-alpha.5"
-tonic = {version="0.1.0-alpha.5",features=["rustls"]}
+tonic-build = "0.1.0-alpha.6"
+tonic = {version="0.1.0-alpha.6",features=["rustls"]}
 prost-types = "0.5"
 
 [build-dependencies]
-tonic-build = {version="0.1.0-alpha.5"}
+tonic-build = {version="0.1.0-alpha.6"}
