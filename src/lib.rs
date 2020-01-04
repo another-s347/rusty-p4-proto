@@ -20,7 +20,6 @@ pub mod proto {
 
 pub mod google {
     pub mod rpc {
-        use crate::proto::v1::*;
         include!(concat!(env!("OUT_DIR"), "/google.rpc.rs"));
     }
 }
