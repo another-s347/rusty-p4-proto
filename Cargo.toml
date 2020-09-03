@@ -10,9 +10,9 @@ description = "Proto crate for Rusty-p4. Using p4runtime from PI repo."
 [dependencies]
 prost = "0.6"
 bytes = "0.5"
-tonic-build = "0.1.0"
-tonic = {version="0.1.0"}
+tonic-build = "0.3"
+tonic = {version="0.3"}
 prost-types = "0.6"
 
 [build-dependencies]
-tonic-build = {version="0.1.0"}
+tonic-build = {version="0.3", features = ["prost"]}
